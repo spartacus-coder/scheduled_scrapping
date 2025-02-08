@@ -1,0 +1,22 @@
+name: Daily Commit
+
+on:
+  schedule:
+    - cron: '30 12 * * *'  # Runs at 12:30 UTC every day
+
+jobs:
+  create_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Git with email 23f3001731@ds.study.iitm.ac.in
+        run: |
+          git config --local user.email "23f3001731@ds.study.iitm.ac.in"
+          git config --local user.name "GitHub Action"
+
+      - name: Create and push empty commit
+        run: |
+          git commit --allow-empty -m "Daily automated commit"
+          git push
