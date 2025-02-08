@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Git with email 23f3001731@ds.study.iitm.ac.in
+      - name: 23f3001731@ds.study.iitm.ac.in
         run: |
           git config --local user.email "23f3001731@ds.study.iitm.ac.in"
           git config --local user.name "GitHub Action"
