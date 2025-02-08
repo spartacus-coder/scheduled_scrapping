@@ -1,6 +1,7 @@
 name: Daily Commit
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '30 12 * * *'  # Runs at 12:30 UTC every day
 
